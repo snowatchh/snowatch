@@ -11,19 +11,17 @@ body {
 
 body {
     background: #080807;
-    color: #b4b1a8;
+    color: #aaa79f;
     font-family: Georgia, "Times New Roman", serif;
     overflow-x: hidden;
 }
-
-/* subtle screen noise */
 
 .noise {
     position: fixed;
     inset: 0;
     pointer-events: none;
     z-index: 20;
-    opacity: 0.07;
+    opacity: 0.06;
 
     background-image:
         repeating-linear-gradient(
@@ -34,7 +32,7 @@ body {
         );
 }
 
-/* header */
+/* HEADER */
 
 header {
     height: 70px;
@@ -44,23 +42,22 @@ header {
     justify-content: space-between;
     align-items: center;
 
-    border-bottom: 1px solid #1b1a17;
+    border-bottom: 1px solid #191816;
 }
 
 .logo {
     font-family: Arial, Helvetica, sans-serif;
     font-size: 15px;
-    letter-spacing: -0.5px;
-    color: #d0cec6;
+    color: #c4c1b8;
 }
 
 .page-number {
     font-family: monospace;
     font-size: 10px;
-    color: #55534d;
+    color: #484640;
 }
 
-/* main */
+/* MAIN */
 
 main {
     position: relative;
@@ -68,19 +65,7 @@ main {
     padding: 45px 7vw 100px;
 }
 
-/* top text */
-
-.top-line {
-    position: relative;
-    margin-left: 9vw;
-
-    font-size: 14px;
-    color: #6f6d66;
-
-    transform: rotate(-0.5deg);
-}
-
-/* monitor */
+/* SCREEN */
 
 .signal {
     position: relative;
@@ -89,15 +74,14 @@ main {
     max-width: 760px;
     height: 300px;
 
-    margin: 70px auto 0;
+    margin: 90px auto 0;
 
-    background: #11110f;
-    border: 1px solid #22211e;
+    background: #10100e;
+    border: 1px solid #20201d;
 
-    transform: rotate(-1.1deg);
+    transform: rotate(-1deg);
 
     display: flex;
-    flex-direction: column;
     justify-content: center;
     align-items: center;
 
@@ -120,17 +104,16 @@ main {
 
 .signal::after {
     content: "";
-    position: absolute;
 
+    position: absolute;
     width: 130%;
     height: 1px;
 
-    background: #393832;
-
     left: -15%;
-    top: 47%;
+    top: 50%;
 
-    opacity: 0.25;
+    background: #383731;
+    opacity: 0.3;
 }
 
 .signal-text {
@@ -138,127 +121,144 @@ main {
     z-index: 2;
 
     font-family: Arial, Helvetica, sans-serif;
-    font-size: 21px;
+    font-size: 20px;
     letter-spacing: 5px;
 
-    color: #77746c;
+    color: #66635c;
 }
 
 .signal-time {
     position: absolute;
     z-index: 2;
 
-    right: 18px;
-    bottom: 13px;
+    right: 16px;
+    bottom: 12px;
 
     font-family: monospace;
     font-size: 9px;
-    color: #46443f;
+
+    color: #3f3d38;
 }
 
-/* side note */
+/* RANDOM MARKS */
+
+.small-mark {
+    position: absolute;
+
+    top: 395px;
+    left: 9vw;
+
+    font-family: monospace;
+    font-size: 10px;
+
+    color: #393833;
+
+    transform: rotate(-8deg);
+}
 
 .side-note {
     position: absolute;
 
-    right: 11vw;
-    top: 390px;
+    top: 410px;
+    right: 12vw;
 
     font-family: monospace;
-    font-size: 11px;
+    font-size: 9px;
 
-    line-height: 1.6;
+    line-height: 2;
 
-    color: #55534e;
+    color: #393833;
 
-    transform: rotate(2deg);
+    transform: rotate(3deg);
 }
 
-/* writing */
-
-.writing {
-    margin-top: 110px;
-    margin-left: 17vw;
-
-    max-width: 430px;
-
-    font-size: 17px;
-    line-height: 1.9;
-
-    color: #88857d;
-}
-
-.writing p {
-    margin: 0 0 18px;
-}
-
-.writing p:nth-child(2) {
-    margin-left: 38px;
-}
-
-.writing p:nth-child(3) {
-    margin-left: 80px;
-    color: #5e5c56;
-}
-
-/* large empty area */
-
-.empty-space {
-    height: 280px;
-}
-
-/* fragment */
+/* MAIN FRAGMENT */
 
 .fragment {
-    margin-left: 5vw;
+    margin-top: 120px;
+    margin-left: 8vw;
 
-    max-width: 650px;
+    max-width: 600px;
 
     font-size: 18px;
     line-height: 2;
-
-    color: #9a978e;
 }
 
 .fragment p {
     margin: 0;
 }
 
-.fragment p:first-child {
-    transform: translateX(20px);
-}
+.fragment .faded {
+    margin-left: 110px;
+    margin-top: 15px;
 
-.fragment p:nth-child(2) {
-    color: #706e68;
-    margin-left: 95px;
-}
-
-/* repeated text */
-
-.repeated {
-    margin-top: 45px;
-    margin-left: 160px;
-
-    font-family: monospace;
-    font-size: 11px;
-    line-height: 2.5;
-
-    color: #383732;
+    color: #57544e;
 
     transform: rotate(-1deg);
 }
 
-/* file information */
+/* EMPTY SPACE */
 
-.file-info {
+.empty-space {
+    height: 330px;
+}
+
+/* STRAY TEXT */
+
+.stray-text {
     position: relative;
 
+    margin-left: 55vw;
+
+    font-family: monospace;
+    font-size: 9px;
+
+    color: #35342f;
+
+    transform: rotate(1deg);
+}
+
+/* BROKEN TEXT */
+
+.broken-text {
+    position: relative;
+
+    margin-top: 90px;
+    margin-left: 18vw;
+
+    width: 300px;
+
+    font-size: 13px;
+    color: #4a4842;
+
+    opacity: 0.6;
+
+    transform:
+        translateX(-4px)
+        skewX(-8deg);
+}
+
+.broken-text::after {
+    content: "i should have left it alone";
+
+    position: absolute;
+    left: 5px;
+    top: 2px;
+
+    color: #272621;
+    clip-path: inset(0 45% 0 0);
+}
+
+/* FILE INFO */
+
+.file-info {
     margin-top: 130px;
-    padding-top: 12px;
 
     width: 90%;
 
-    border-top: 1px solid #1c1b18;
+    padding-top: 12px;
+
+    border-top: 1px solid #191815;
 
     display: flex;
     justify-content: space-between;
@@ -266,10 +266,10 @@ main {
     font-family: monospace;
     font-size: 9px;
 
-    color: #494741;
+    color: #3e3c37;
 }
 
-/* footer */
+/* FOOTER */
 
 footer {
     height: 40px;
@@ -285,34 +285,34 @@ footer {
     font-family: monospace;
     font-size: 9px;
 
-    color: #3d3b36;
+    color: #36342f;
 }
 
-/* occasional distortion */
+/* SCREEN FLICKER */
 
 @keyframes flicker {
-    0%, 94%, 100% {
+    0%, 93%, 100% {
         opacity: 1;
     }
 
-    95% {
+    94% {
         opacity: 0.65;
     }
 
-    96% {
+    95% {
         opacity: 0.9;
     }
 
     97% {
-        opacity: 0.4;
+        opacity: 0.45;
     }
 }
 
 .signal-text {
-    animation: flicker 7s infinite;
+    animation: flicker 8s infinite;
 }
 
-/* mobile */
+/* MOBILE */
 
 @media (max-width: 700px) {
 
@@ -322,10 +322,6 @@ footer {
 
     main {
         padding: 35px 25px 80px;
-    }
-
-    .top-line {
-        margin-left: 0;
     }
 
     .signal {
@@ -339,41 +335,33 @@ footer {
         letter-spacing: 3px;
     }
 
+    .small-mark {
+        left: 20px;
+    }
+
     .side-note {
-        position: relative;
-        right: auto;
-        top: auto;
-
-        margin: 45px 0 0 55%;
-    }
-
-    .writing {
-        margin-left: 0;
-        margin-top: 80px;
-    }
-
-    .writing p:nth-child(2) {
-        margin-left: 15px;
-    }
-
-    .writing p:nth-child(3) {
-        margin-left: 35px;
-    }
-
-    .empty-space {
-        height: 180px;
+        right: 30px;
     }
 
     .fragment {
         margin-left: 0;
+        margin-top: 90px;
     }
 
-    .fragment p:nth-child(2) {
-        margin-left: 35px;
+    .fragment .faded {
+        margin-left: 40px;
     }
 
-    .repeated {
-        margin-left: 55px;
+    .empty-space {
+        height: 220px;
+    }
+
+    .stray-text {
+        margin-left: 55%;
+    }
+
+    .broken-text {
+        margin-left: 10%;
     }
 
     .file-info {
